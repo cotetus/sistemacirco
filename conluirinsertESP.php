@@ -2,22 +2,22 @@
 
 include_once ("Clases/Espectaculos.class.php");
    
+   
    $nombre = $_POST["nombre"];
    $artista = $_POST["artista"];
    $descripcion = $_POST["descripcion"];
  
    if($_FILES["img"]){
-	   $direccion ="";
+	   $direccion ="image/";
 	   $nanmeimage = $_FILES["img"]["name"];
 	   $nombreTemp = $_FILES["img"]["tmp_name"];
-	   move_uploaded_file($nombreTemp,$direccion.$nombre);
+	   move_uploaded_file($nombreTemp,$direccion.$nanmeimage);
    }
    $img = $nanmeimage;
    $id = null;
    $insert = Espectaculos::save($nombre, $artista, $descripcion, $img, $id);
-	if($insert)
+	if($insert){
 		echo "Sussesfull";
-	else
-		echo "Error";
-
+	}else{
+		echo "Error";}
 ?>   

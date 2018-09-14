@@ -59,7 +59,7 @@
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
-         $sql->bindParam(':img', $img);
+         $sql->bindParam(':img', $img, PDO::PARAM_STR);
          $id = $conexion->lastInsertId();
          $sql->execute();
          

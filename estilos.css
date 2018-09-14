@@ -7,7 +7,6 @@
 
 
  header {
- 	 margin-top: 100px;
  	 height: 30px;
  	 width: 100%;
  	 background: #393939;
@@ -30,10 +29,7 @@
  	background: rgba(0,0,0,0.3);
  }
 
- div {
- 	margin: 50px;
- 	background-color: #293939
- }
+
 
  ul {
  	list-style: none;
