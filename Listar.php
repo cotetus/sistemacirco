@@ -9,8 +9,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="estilos.css">
-        <link rel="stylesheet" type="text/css" href="divs-espectaculos.css">
+        <link rel="stylesheet" type="text/css" href="estilo/divs-espectaculos.css">
+        <link rel="stylesheet" type="text/css" href="estilo/estilos.css">
+        
 
     </head>
     
@@ -48,8 +49,9 @@
       	<?php foreach($esp as $item): ?>
         	<div id="esp-wrapper">
         	<img id="esp-img" <?php echo "src = 'image/".$item['img']."'";?>/>
-        	<h3><?php echo $item['nombre'];?></h3><p><?php echo $item['descripcion'];?></p>
-            <p><?php echo $item['artista'];?></p>
+        	<h3><?php echo $item['nombre'];?></h3>
+        	<p><?php echo $item['artista'];?></p>
+        	
            </div>
   		<?php endforeach; ?>
        

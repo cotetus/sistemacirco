@@ -1,0 +1,32 @@
+body {
+	background-color: gray;
+}
+ #esp-img {
+    width: 230px;
+    height: 230px;
+    transition: transform .8s;
+}
+   
+
+
+#esp-img:hover {
+    transform: scale(1.1);
+}
+
+ #esp-wrapper   {
+ 	padding: auto;
+ 	margin: auto;
+    background-color: #fff;	
+}
+
+  #row{
+	margin-top: 100px;
+	background-color: #fff;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
