@@ -1,3 +1,4 @@
+/*Menu!*/
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@
 
  header label:hover {
  	cursor: pointer;
- 	background: rgba(0,0,0,0.3);
+ 	background: rgba(255,255,255,0.1);
  }
 
 
@@ -44,13 +45,9 @@
  	background: #393939;
 
  }
- .menu ul ul {
-		display: none;
-
-	}
 
  .menu li:hover {
- 	background: rgba(0,0,0,0.3);
+ 	background: rgba(255,255,255,0.1);
 
  }
 
@@ -66,10 +63,6 @@
 	margin-left: 10px;
 }
 
-.menu ul li:hover ul {
-	display: block;
-	position: absolute;
-}
 
 @media (max-width: 760px) {
 
@@ -79,9 +72,8 @@
 
 	.menu {
 		position: absolute;
-		top: 50px;
 		left: 0;
-		width: 50%;
+		width: 100%;
 		transform: translateX(-100%);
 		transition: all 0.5s;
 	}

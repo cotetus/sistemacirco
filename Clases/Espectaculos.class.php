@@ -51,7 +51,7 @@
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
-         $sql->bindParam(':img', $img, PDO::PARAM_LOB);
+         $sql->bindParam(':img', $img, PDO::PARAM_STR);
          $sql->bindParam(':id', $id);
          $sql->execute();
       }else {  //Inserta.
@@ -85,6 +85,20 @@
        $reg = $sql->fetchAll();
        return $reg;
     }
+
+   /* public static function editImg($id){
+      $conexion = new Conexion();
+      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img WHERE id = :id';);
+      $sql->bindParam(':id', $id);
+      $sql->execute();
+
+    }
+
+    public static function delete($id){
+      $conexion = new Conexion();
+      $sql = $conexion->prepare('DELETE FROM'. self::TABLA .' WHERE id = :id;';);
+      $sql->execute();*/
+    
 
 //CONSTANTES Sqls.
     //Espectaculos.

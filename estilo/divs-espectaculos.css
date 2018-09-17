@@ -1,13 +1,19 @@
 body {
 	background-color: gray;
 }
+ .menu-div-esp{
+ 	float: left;
+ 	height: 500px;
+ 	width: 30%;
+ 	background-color: red;
+ }
  #esp-img {
     width: 230px;
     height: 230px;
+    margin-top: 20px;
     transition: transform .8s;
 }
    
-
 
 #esp-img:hover {
     transform: scale(1.1);
@@ -19,11 +25,13 @@ body {
     background-color: #fff;	
 }
 
-  #row{
-	margin-top: 100px;
+ #wrapper-esp-all {
+ 	margin-top: 100px;
 	background-color: #fff;
 	height: auto;
 	width: 100%;
+ }
+  #row{
 	display: flex;
 	flex-wrap: wrap;
 }

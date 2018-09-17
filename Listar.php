@@ -27,11 +27,6 @@
                     <li class="submenu"><a href="#">LOGO</a>
                     </li>
                     <li class="submenu"><a href="#">Espectaculos</a>
-                        <ul>
-                            <li><a href="#">TODOS</a></li>
-                            <li><a href="#">EN GIRA</a></li>
-                            <li><a href="#">CIUDADES</a></li>
-                        </ul>
                     </li>
                     <li class="submenu"><a href="#">Agenda</a>
                     </li>
@@ -43,18 +38,17 @@
                 </nav>
                  
         </header>
-        
-        <div id="row">
-        
+        <div id="wrapper-esp-all">
+        	<div class="menu-div-esp"></div>
+        	<div id="row">
       	<?php foreach($esp as $item): ?>
         	<div id="esp-wrapper">
         	<img id="esp-img" <?php echo "src = 'image/".$item['img']."'";?>/>
         	<h3><?php echo $item['nombre'];?></h3>
         	<p><?php echo $item['artista'];?></p>
-        	
            </div>
   		<?php endforeach; ?>
-       
+       </div>
        </div>
     
     </body>
