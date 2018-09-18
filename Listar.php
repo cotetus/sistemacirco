@@ -24,7 +24,6 @@
             
                 <nav class="menu">  
                 <ul>
-                    <li class="submenu"><a href="#">LOGO</a>
                     </li>
                     <li class="submenu"><a href="#">Espectaculos</a>
                     </li>
