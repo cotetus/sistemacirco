@@ -39,7 +39,12 @@
                  
         </header>
         <div id="wrapper-esp-all">
-        	<div class="menu-div-esp"></div>
+        	<div class="menu-div-esp">
+        		<ul id="menu-esp-ul">
+        			<li><a href="#">Todos los Espectaculos</a></li>
+        			<li><a href="#">En Gira</a></li>
+        			<li><a href="#">Todas las Ciudades</a></li>
+        		</ul></div>
         	<div id="row">
       	<?php foreach($esp as $item): ?>
         	<div id="esp-wrapper">

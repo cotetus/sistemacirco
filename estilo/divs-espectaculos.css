@@ -3,15 +3,16 @@ body {
 }
  .menu-div-esp{
  	float: left;
- 	height: 500px;
+ 	height: 100%;
  	width: 30%;
- 	background-color: red;
+
  }
  #esp-img {
     width: 230px;
     height: 230px;
     margin-top: 20px;
     transition: transform .8s;
+
 }
    
 
@@ -26,7 +27,6 @@ body {
 }
 
  #wrapper-esp-all {
- 	margin-top: 100px;
 	background-color: #fff;
 	height: auto;
 	width: 100%;
@@ -34,6 +34,28 @@ body {
   #row{
 	display: flex;
 	flex-wrap: wrap;
+
+}
+
+#menu-esp-ul {
+	list-style-type: none;
+    width: 100%;
+    text-align: left;
+    background-color: #f5f5f5;
+}
+
+#menu-esp-ul li a {
+    display: block;
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#menu-esp-ul li a:hover {
+    background-color: #555;
+    color: white;
 }
 
 
