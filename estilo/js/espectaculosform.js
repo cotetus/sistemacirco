@@ -1,3 +1,8 @@
+
+
+/*Ejemplo de proyecto anterior; usaré la misma estructura para la insercion de espectaculos
+en el panel del admin.
+
 // Product Constructor
 class Product {
     constructor(name, price, year) {
