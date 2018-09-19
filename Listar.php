@@ -45,7 +45,7 @@
         			<li><a href="#">Todas las Ciudades</a></li>
         		</ul></div>
         	<div id="row">
-                
+                <!-- Posible cambios con JavaScript-->
       	<?php foreach($esp as $item): ?>
         	<div id="esp-wrapper">
         	<img id="esp-img" <?php echo "src = 'image/".$item['img']."'";?>/>
