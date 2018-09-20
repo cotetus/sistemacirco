@@ -7,6 +7,7 @@
    private $descripcion;
    private $artista;
    private $img;
+   private $banner;
    const TABLA = 'espectaculos';
    
    public function getId() {
@@ -53,16 +54,16 @@
    }
    public function save($nombre, $artista, $descripcion, $img, $id){
       $conexion = new Conexion();
-      if($id) { //Modifica.
-         $sql = $conexion->prepare(UPDATE_ESP);
+      if($id) { //Modifica toda una linea, mediante le id.
+         $sql = $conexion->prepare('UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img WHERE id = :id');
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
          $sql->bindParam(':img', $img, PDO::PARAM_STR);
          $sql->bindParam(':id', $id);
          $sql->execute();
-      }else {  //Inserta.
-         $sql = $conexion->prepare(self::INSERT_ESP);
+      }else {  //Inserta un nuevo espectaculo.
+         $sql = $conexion->prepare('INSERT INTO ' . self::TABLA .' (nombre, descripcion, artista, img) VALUES(:nombre, :descripcion, :artista, :img)');
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
@@ -73,26 +74,23 @@
       }
       $conexion = null;
    }
-   public static function listOne($id){//Retorna nombre, descrip, artist por el id.
+   public static function listOne($id){//Retorna nombre, descri.. por el id.
        $conexion = new Conexion();
-       $sql = $conexion->prepare(self::SELECTON_ESP);
+       $sql = $conexion->prepare('SELECT nombre, descripcion, artista, img FROM ' . self::TABLA . ' WHERE id = :id');
        $sql->bindParam(':id', $id);
        $sql->execute();
-       $reg = $sql->fetch(); //Devuelve una única linea de la TABLA(id seleccionado).
-       if($reg){
-          return new self($reg['nombre'], $reg['descripcion'], $reg['artista'], $reg['img'], $id);
-       }else{
-          return false;
-       }
+       $reg = $sql->fetch(); //Devuelve una única linea (array con cada campo) de la TABLA(id seleccionado).
+       return $reg;
+       
     }
     public static function listAll(){
        $conexion = new Conexion();
-       $sql = $conexion->prepare (self::SELECT_ESP);
+       $sql = $conexion->prepare ('SELECT id, nombre, descripcion, artista, img FROM ' . self::TABLA . ' ORDER BY nombre');
        $sql->execute();
        $reg = $sql->fetchAll();
        return $reg;
     }
-
+    //Edita solamente la imagen "miniatura" del listado de espectaculos.
     public static function editImg($id){
       $conexion = new Conexion();
       $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img WHERE id = :id');
@@ -100,6 +98,7 @@
       $sql->execute();
 
     }
+    //Edita el banner de cada espectaculo.
     public static function editBanner($id){
       $conexion = new Conexion();
       $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET banner = :banner WHERE id = :id');
@@ -107,22 +106,12 @@
       $sql->execute();
 
     }
-
+    //Elimina toda una linea de la tabla.
     public static function delete($id){
       $conexion = new Conexion();
       $sql = $conexion->prepare('DELETE FROM'. self::TABLA .' WHERE id = :id');
       $sql->execute();    
 }
-//CONSTANTES Sqls.
-    //Espectaculos.
-    const UPDATE_ESP = 'UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img WHERE id = :id';
-    const INSERT_ESP = 'INSERT INTO ' . self::TABLA .' (nombre, descripcion, artista, img) VALUES(:nombre, :descripcion, :artista, :img)';
-    const SELECTON_ESP = 'SELECT nombre, descripcion, artista, img FROM ' . self::TABLA . ' WHERE id = :id';
-    const SELECT_ESP = 'SELECT id, nombre, descripcion, artista, img FROM ' . self::TABLA . ' ORDER BY nombre';
-   
-    
-    
-
 
  }
 
