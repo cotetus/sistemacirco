@@ -24,6 +24,9 @@
    public function getImg() {
       return $this->img;
    }
+   public function getBanner(){
+     return $this->banner;
+   }
    public function setNombre($nombre) {
       $this->nombre = $nombre;
    }
@@ -36,11 +39,15 @@
    public function setImg($img){
       $this->img = $img;
    }
-   public function __construct($nombre, $artista, $descripcion, $img, $id=null) {
+   public function setBanner($banner){
+      $this->banner =$banner;
+   }
+   public function __construct($nombre, $artista, $descripcion, $img, $banner, $id) {
       $this->nombre = $nombre;
       $this->artista = $artista;
       $this->descripcion = $descripcion;
       $this->img = $img;
+      $this->banner = $banner;
       $this->id = $id;
 
    }
@@ -86,9 +93,16 @@
        return $reg;
     }
 
-   /* public static function editImg($id){
+    public static function editImg($id){
       $conexion = new Conexion();
-      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img WHERE id = :id';);
+      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img WHERE id = :id');
+      $sql->bindParam(':id', $id);
+      $sql->execute();
+
+    }
+    public static function editBanner($id){
+      $conexion = new Conexion();
+      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET banner = :banner WHERE id = :id');
       $sql->bindParam(':id', $id);
       $sql->execute();
 
@@ -96,10 +110,9 @@
 
     public static function delete($id){
       $conexion = new Conexion();
-      $sql = $conexion->prepare('DELETE FROM'. self::TABLA .' WHERE id = :id;';);
-      $sql->execute();*/
-    
-
+      $sql = $conexion->prepare('DELETE FROM'. self::TABLA .' WHERE id = :id');
+      $sql->execute();    
+}
 //CONSTANTES Sqls.
     //Espectaculos.
     const UPDATE_ESP = 'UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img WHERE id = :id';
