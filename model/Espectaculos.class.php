@@ -51,28 +51,28 @@
       $this->id = $id;
 
    }*/
-   public function save($nombre, $artista, $descripcion, $img, $id){
+   public function save($nombre, $artista, $descripcion, $img, $banner, $id){
       $conexion = new Conexion();
       if($id) { //Modifica toda una linea, mediante le id.
 
-         $sql = $conexion->prepare('UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img WHERE id = :id');
+         $sql = $conexion->prepare('UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img, banner = :banner WHERE id = :id');
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
          $sql->bindParam(':img', $img, PDO::PARAM_STR);
+         $sql->bindParam(':banner', $banner, PDO::PARAM_STR);
          $sql->bindParam(':id', $id);
          $sql->execute();
       }else {  //Inserta un nuevo espectaculo.
-         $sql = $conexion->prepare('INSERT INTO ' . self::TABLA .' (nombre, descripcion, artista, img) VALUES(:nombre, :descripcion, :artista, :img)');
+         $sql = $conexion->prepare('INSERT INTO ' . self::TABLA .' (nombre, descripcion, artista, img, banner) VALUES(:nombre, :descripcion, :artista, :img, :banner)');
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
+         $sql->bindParam(':banner', $banner, PDO::PARAM_STR);
          $sql->bindParam(':img', $img, PDO::PARAM_STR);
          $id = $conexion->lastInsertId();
          $sql->execute();
-         
       }
-      $conexion = null;
    }
    public static function listOne($id){//Retorna nombre, descri.. por el id.
        $conexion = new Conexion();

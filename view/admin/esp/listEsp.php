@@ -1,4 +1,4 @@
-        	<div id="row">
+          <div id="row">
                 <!-- Posibles cambios con JavaScript-->
       	<?php foreach($this->model->listAll() as $item): ?>
         	<div id="esp-wrapper">
@@ -6,7 +6,7 @@
         	<h3><?php echo $item['nombre'];?></h3>
         	<p><?php echo $item['artista'];?></p>
           <a href="#">Ver espectáculo</a>
-          <a href="?c=esp&a=Index">Editar</a>
+          <a href="#">Editar</a>
            </div>
   		<?php endforeach; ?>
        </div>

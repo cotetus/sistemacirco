@@ -11,18 +11,19 @@ class espController{
     
     public function Index(){
         require_once 'view/admin/header.php';
+        require_once 'view/admin/esp/menu.php';
         require_once 'view/admin/esp/listEsp.php';
         require_once 'view/admin/footer.php';
     }
     
     public function Crud(){
-        $esp = new Espectaculos();
         
         if(isset($_REQUEST['id'])){
             $esp = $this->model->listOne($_REQUEST['id']);
         }
         
         require_once 'view/admin/header.php';
+        require_once 'view/admin/esp/menu.php';
         require_once 'view/admin/esp/esp-editar.php';
         require_once 'view/admin/footer.php';
     }
@@ -39,11 +40,21 @@ class espController{
        $nombreTemp = $_FILES["img"]["tmp_name"];
        move_uploaded_file($nombreTemp,$direccion.$nanmeimage);
    }
-       $img = $nanmeimage;   
+       $img = $nanmeimage;
+       if($_FILES["banner"]){
+       $direction ="assets/image/banner";
+       $namebanner = $_FILES["img"]["name"];
+       $nameTemp = $_FILES["img"]["tmp_name"];
+       move_uploaded_file($nameTemp,$direction.$namebanner);
+   }
+       $banner = $namebanner;   
        
-        $insert = Espectaculos::save($nombre, $artista, $descripcion, $img, $id);
-        
+        $insert = Espectaculos::save($nombre, $artista, $descripcion, $img, $banner, $id);
+        if (isset($insert)) {
         header('Location: index.php');
+        }else{
+            echo "ERROR al ingresar.";
+        }
     }
     
     public function Eliminar(){
