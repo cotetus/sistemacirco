@@ -1,9 +1,9 @@
 
-		<form method="POST" action="conluirinsertESP.php" enctype="multipart/form-data">
+		<form method="POST" action="../controlers/conluirinsertESP.php" enctype="multipart/form-data">
 		<table align= 'center'>
 		<tr><td><label>Nombre:</label></td>
 		<td><input type="text" name="nombre"/></td></tr>
-		<tr><td><label>Artista:</label></td>
+		<tr><td><label>Slogan:</label></td>
 		<td><input type= "text" name="artista"/></td></tr>
 		<tr><td><label>Imagen:</label></td>
 		<td><input type="file" name="img"/></td></tr>

@@ -1,6 +1,6 @@
 <?php
 
-include_once ("Clases/Espectaculos.class.php");
+include_once ("../models/Espectaculos.class.php");
    
    
    $nombre = $_POST["nombre"];

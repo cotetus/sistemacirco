@@ -1,5 +1,4 @@
 <?php
- require_once('Conexion.php');
 
  class Espectaculos {
    private $id;
@@ -43,7 +42,7 @@
    public function setBanner($banner){
       $this->banner =$banner;
    }
-   public function __construct($nombre, $artista, $descripcion, $img, $banner, $id) {
+   /*public function __construct($nombre, $artista, $descripcion, $img, $banner, $id) {
       $this->nombre = $nombre;
       $this->artista = $artista;
       $this->descripcion = $descripcion;
@@ -51,10 +50,11 @@
       $this->banner = $banner;
       $this->id = $id;
 
-   }
+   }*/
    public function save($nombre, $artista, $descripcion, $img, $id){
       $conexion = new Conexion();
       if($id) { //Modifica toda una linea, mediante le id.
+
          $sql = $conexion->prepare('UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img WHERE id = :id');
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);

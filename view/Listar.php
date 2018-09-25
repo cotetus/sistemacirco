@@ -1,7 +1,7 @@
 <?php
- require_once 'Clases/Espectaculos.class.php';
+ require_once '../models/Espectaculos.class.php';
  $esp = Espectaculos::listAll();
-?>
+?> <!-- Veamos que ocurre con MVC-->
 <!DOCTYPE html>
 <html>
     <head>
