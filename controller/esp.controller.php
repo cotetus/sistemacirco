@@ -19,9 +19,8 @@ class espController{
     public function Crud(){
         
         if(isset($_REQUEST['id'])){
-            $esp = $this->model->listOne($_REQUEST['id']);
+            $esp = Espectaculos::listOne($_REQUEST['id']);
         }
-        
         require_once 'view/admin/header.php';
         require_once 'view/admin/esp/menu.php';
         require_once 'view/admin/esp/esp-editar.php';
@@ -58,7 +57,7 @@ class espController{
     }
     
     public function Eliminar(){
-        $this->model->delete($_REQUEST['id']);
+        $delete = Espectaculos::delete($_REQUEST['id']);
         header('Location: index.php');
     }
 }

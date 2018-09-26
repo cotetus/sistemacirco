@@ -1,4 +1,6 @@
-    
+  		<h1>
+    	<?php echo $esp['id'] != null ? $esp['nombre'] : 'Nuevo Registro'; ?>
+		</h1>    
 		<form method="POST" action="?c=esp&a=Guardar" enctype="multipart/form-data">
 		<table align= 'center'>
 		<tr><td><label>Nombre:</label></td>

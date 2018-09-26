@@ -110,6 +110,7 @@
     public static function delete($id){
       $conexion = new Conexion();
       $sql = $conexion->prepare('DELETE FROM'. self::TABLA .' WHERE id = :id');
+      $sql->bindParam(':id', $id);
       $sql->execute();    
 }
 
