@@ -53,14 +53,12 @@
    }*/
    public function save($nombre, $artista, $descripcion, $img, $banner, $id){
       $conexion = new Conexion();
-      if($id) { //Modifica toda una linea, mediante le id.
+      if($id) { //Modifica toda una linea, mediante el id.
 
          $sql = $conexion->prepare('UPDATE ' . self::TABLA .' SET nombre = :nombre, descripcion = :descripcion, artista = :artista, img = :img, banner = :banner WHERE id = :id');
          $sql->bindParam(':nombre', $nombre, PDO::PARAM_STR);
          $sql->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
          $sql->bindParam(':artista', $artista, PDO::PARAM_STR);
-         $sql->bindParam(':img', $img, PDO::PARAM_STR);
-         $sql->bindParam(':banner', $banner, PDO::PARAM_STR);
          $sql->bindParam(':id', $id);
          $sql->execute();
       }else {  //Inserta un nuevo espectaculo.
@@ -73,13 +71,14 @@
          $id = $conexion->lastInsertId();
          $sql->execute();
       }
+      return $sql;
    }
    public static function listOne($id){//Retorna nombre, descri.. por el id.
        $conexion = new Conexion();
        $sql = $conexion->prepare('SELECT nombre, descripcion, artista, img FROM ' . self::TABLA . ' WHERE id = :id');
        $sql->bindParam(':id', $id);
        $sql->execute();
-       $reg = $sql->fetch(); //Devuelve una única linea (array con cada campo) de la TABLA(id seleccionado).
+       $reg = $sql->fetch(PDO::FETCH_ASSOC); //Devuelve una única linea (array con cada campo) de la TABLA(id seleccionado).
        return $reg;
        
     }
@@ -91,12 +90,13 @@
        return $reg;
     }
     //Edita solamente la imagen "miniatura" del listado de espectaculos.
-    public static function editImg($id){
+    public static function editImg($id, $img){
       $conexion = new Conexion();
       $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img WHERE id = :id');
       $sql->bindParam(':id', $id);
+      $sql->bindParam(':img', $img);
       $sql->execute();
-
+      return $sql;
     }
     //Edita el banner de cada espectaculo.
     public static function editBanner($id){

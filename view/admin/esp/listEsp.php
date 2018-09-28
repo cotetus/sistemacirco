@@ -2,7 +2,9 @@
                 <!-- Posibles cambios con JavaScript-->
       	<?php foreach($this->model->listAll() as $item): ?>
         	<div id="esp-wrapper">
-        	<img id="esp-img" <?php echo "src = 'assets/image/".$item['img']."'";?>/>
+          <a <?php echo "href='?c=esp&a=Img&id= ".$item['id']."'";?>>
+          <img id="esp-img" <?php echo "src = 'assets/image/".$item['img']."'";?>/> 
+          </a>
         	<h3><?php echo $item['nombre'];?></h3>
         	<p><?php echo $item['artista'];?></p>
           <a <?php echo "href='?c=esp&a=Eliminar&id= ".$item['id']."'";?>>Eliminar</a>
