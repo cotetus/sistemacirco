@@ -90,28 +90,22 @@
        return $reg;
     }
     //Edita solamente la imagen "miniatura" del listado de espectaculos.
-    public static function editImg($id, $img){
+    public static function editImg($id, $img, $banner){
       $conexion = new Conexion();
-      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img WHERE id = :id');
+      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET img = :img, banner = :banner WHERE id = :id');
       $sql->bindParam(':id', $id);
       $sql->bindParam(':img', $img);
+      $sql->bindParam(':banner', $banner);
       $sql->execute();
       return $sql;
-    }
-    //Edita el banner de cada espectaculo.
-    public static function editBanner($id){
-      $conexion = new Conexion();
-      $sql = $conexion->prepare('UPDATE '. self::TABLA .' SET banner = :banner WHERE id = :id');
-      $sql->bindParam(':id', $id);
-      $sql->execute();
-
     }
     //Elimina toda una linea de la tabla.
     public static function delete($id){
       $conexion = new Conexion();
       $sql = $conexion->prepare('DELETE FROM'. self::TABLA .' WHERE id = :id');
-      $sql->bindParam(':id', $id);
-      $sql->execute();    
+      $sql->bindParam(':id', $id, PDO::PARAM_STR);
+      $sql->execute();
+      return $sql;    
 }
 
  }

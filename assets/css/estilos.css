@@ -8,7 +8,6 @@
 
 
  header {
- 	 height: 30px;
  	 width: 100%;
  	 background: #393939;
  	 margin-bottom: 10px;
@@ -23,7 +22,7 @@
  	display: none;
  	width: 30px;
  	background: #393939;
- 	height: 30px;
+ 	
  }
 
  header label:hover {
@@ -60,7 +59,7 @@
 }
 
 .menu a span {
-	margin-left: 10px;
+	margin-left: 2px;
 }
 
 

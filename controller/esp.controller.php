@@ -5,6 +5,7 @@ class espController{
     
     private $model;
     
+    
     public function __CONSTRUCT(){
         $this->model = new Espectaculos();
     }
@@ -21,7 +22,7 @@ class espController{
             $esp = Espectaculos::listOne($_REQUEST['id']);
         }
         require_once 'view/admin/header.php';
-        require_once 'view/admin/esp/menu.php';
+        require_once 'view/admin/esp/menu.php'; 
         require_once 'view/admin/esp/esp-editar.php';
         require_once 'view/admin/footer.php';
      
@@ -46,10 +47,17 @@ class espController{
        move_uploaded_file($nombreTemp,$direccion.$nanmeimage);
    }
        $img = $nanmeimage;
-       if (!$img) {
+       if($_FILES["banner"]){
+       $direction ="assets/image/";
+       $namebanner = $_FILES["img"]["name"];
+       $nameTemp = $_FILES["img"]["tmp_name"];
+       move_uploaded_file($nameTemp,$direction.$namebanner);
+   }
+       $banner = $namebanner;
+       if (!$img && !$banner) {
            header('Location: index.php');
        }else {
-       $insert = Espectaculos::editImg($id, $img);
+       $insert = Espectaculos::editImg($id, $img, $banner);
         if (isset($insert)) {
         header('Location: index.php');
         }
@@ -70,7 +78,7 @@ class espController{
    }
        $img = $nanmeimage;
        if($_FILES["banner"]){
-       $direction ="assets/image/banner";
+       $direction ="assets/image/";
        $namebanner = $_FILES["img"]["name"];
        $nameTemp = $_FILES["img"]["tmp_name"];
        move_uploaded_file($nameTemp,$direction.$namebanner);
@@ -84,7 +92,17 @@ class espController{
     }
     
     public function Eliminar(){
-        $delete = Espectaculos::delete($_REQUEST['id']);
-        header('Location: index.php');
+        $id = $_REQUEST["id"];
+        $delete = Espectaculos::delete($id);
+        if (isset($delete)) {
+            header('Location: index.php');
+        }else{
+            echo "error";
+
+        }
+        
+        
+        
+      
     }
 }
