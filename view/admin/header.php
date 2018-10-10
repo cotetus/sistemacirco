@@ -21,17 +21,17 @@
                 <nav  class="menu">  
                 <ul>
                     </li>
-                    <li class="submenu"><a href="#">Espectaculos</a>
+                    <li ><a href="#">Espectaculos</a>
                     </li>
-                    <li class="submenu"><a href="#">Atracciones</a>
+                    <li ><a href="#">Atracciones</a>
                     </li>
-                    <li class="submenu"><a href="#">Ciudades</a>
+                    <li ><a href="#">Ciudades</a>
                     </li>
-                    <li class="submenu"><a href="#">Cronograma</a>
+                    <li ><a href="#">Cronograma</a>
                     </li>
                 </ul>
                 </nav>
                  
         </header>
-        <script src="assets/js/form.js"></script>
+        <div id="wrapper-esp-all">
         

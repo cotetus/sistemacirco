@@ -75,10 +75,10 @@
    }
    public static function listOne($id){//Retorna nombre, descri.. por el id.
        $conexion = new Conexion();
-       $sql = $conexion->prepare('SELECT nombre, descripcion, artista, img FROM ' . self::TABLA . ' WHERE id = :id');
+       $sql = $conexion->prepare('SELECT nombre, descripcion, artista, img, banner FROM ' . self::TABLA . ' WHERE id = :id');
        $sql->bindParam(':id', $id);
        $sql->execute();
-       $reg = $sql->fetch(PDO::FETCH_ASSOC); //Devuelve una única linea (array con cada campo) de la TABLA(id seleccionado).
+       $reg = $sql->fetch(); //Devuelve una única linea (array con cada campo) de la TABLA(id seleccionado).
        return $reg;
        
     }

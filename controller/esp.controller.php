@@ -12,7 +12,6 @@ class espController{
     
     public function Index(){
         require_once 'view/admin/header.php';
-        require_once 'view/admin/esp/menu.php';
         require_once 'view/admin/esp/listEsp.php';
         require_once 'view/admin/footer.php';
     }
@@ -22,20 +21,9 @@ class espController{
             $esp = Espectaculos::listOne($_REQUEST['id']);
         }
         require_once 'view/admin/header.php';
-        require_once 'view/admin/esp/menu.php'; 
         require_once 'view/admin/esp/esp-editar.php';
         require_once 'view/admin/footer.php';
      
-    }
-
-    public function Img() {
-        if (isset($_REQUEST['id'])) {
-            $img = Espectaculos::listOne($_REQUEST['id']);
-        }
-        require_once 'view/admin/header.php';
-        require_once 'view/admin/esp/menu.php';
-        require_once 'view/admin/esp/img-editar.php';
-        require_once 'view/admin/footer.php';
     }
 
     public function imgSave(){
@@ -48,9 +36,9 @@ class espController{
    }
        $img = $nanmeimage;
        if($_FILES["banner"]){
-       $direction ="assets/image/";
-       $namebanner = $_FILES["img"]["name"];
-       $nameTemp = $_FILES["img"]["tmp_name"];
+       $direction ="assets/image/banner/";
+       $namebanner = $_FILES["banner"]["name"];
+       $nameTemp = $_FILES["banner"]["tmp_name"];
        move_uploaded_file($nameTemp,$direction.$namebanner);
    }
        $banner = $namebanner;
@@ -78,9 +66,9 @@ class espController{
    }
        $img = $nanmeimage;
        if($_FILES["banner"]){
-       $direction ="assets/image/";
-       $namebanner = $_FILES["img"]["name"];
-       $nameTemp = $_FILES["img"]["tmp_name"];
+       $direction ="assets/image/banner/";
+       $namebanner = $_FILES["banner"]["name"];
+       $nameTemp = $_FILES["banner"]["tmp_name"];
        move_uploaded_file($nameTemp,$direction.$namebanner);
    }
        $banner = $namebanner;   

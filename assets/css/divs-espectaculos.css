@@ -38,7 +38,9 @@ body {
 	height: auto;
 	width: 100%;
     margin-top: 20px;
+    height: 100%;
     position: absolute;
+    
  }
   #row{
     margin-top: 50px;
@@ -134,7 +136,11 @@ body {
 }
 .submenu form {
     color: black;
-    display: none;
+}
+
+.footer {
+    background-color: black;
+    height: 300px;
 }
 
 
