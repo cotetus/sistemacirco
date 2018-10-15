@@ -1,0 +1,19 @@
+<?php
+  class Pages extends Controller{
+
+  	public function __contructor(){
+
+  	}
+
+  	public function index(){
+  		
+  		$datos = [
+  			
+  		]
+
+  		$this->view('pages/inicio', $datos);
+  	}
+ 	
+ }
+
+?>
