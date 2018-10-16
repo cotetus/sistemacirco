@@ -1,0 +1,5 @@
+<?php
+
+function redirection($paginas){
+	header('location:'.RUTAL_URL.$paginas);
+}

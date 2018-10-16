@@ -11,7 +11,7 @@
 
  	public function __construct(){
 
- 		$dsn = 'mysql:host='.$this->host.';dbname'.$this->db_name=;
+ 		$dsn = 'mysql:host='.$this->host.';dbname='.$this->db_name=;
  		$opciones = array(
  				PDO::ATTR_PERSISTENT => true,
  				PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
