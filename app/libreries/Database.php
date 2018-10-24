@@ -11,16 +11,15 @@
 
  	public function __construct(){
 
- 		$dsn = 'mysql:host='.$this->host.';dbname='.$this->db_name=;
+ 		$dsn = 'mysql:host='.$this->host.';dbname='.$this->db_name;
  		$opciones = array(
- 				PDO::ATTR_PERSISTENT => true,
  				PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
 
  		try {
  			$this->conection = new PDO($dsn, $this->user, $this->pass, $opciones);
- 			$this->conection->exec('set names utf8');
+ 			//$this->conection->exec('set names utf8');
  		} catch (PDOExeption $e) {
- 			$this->error $e->getMessage();
+ 			$this->error->$e->getMessage();
  			echo $this->error;
  		}
  	}
