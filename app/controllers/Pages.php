@@ -1,14 +1,19 @@
 <?php
   class Pages extends Controller{
+      private $include;
+      private $model;
 
   	public function __contructor(){
-      $this->espModel = $this->model(Espectaculos);
+      $this->include = $this->model(Espectaculos);
+      $this->model = Espectaculos;
 
   	}
+   
+
 
   	public function index(){
   		
-      $espectaculos = $this->espModel->selectEsp();
+      $espectaculos = $this->model->selectEsp();
   		$datos = [
   			'espectaculos' => $espectaculos
   		];
@@ -27,7 +32,7 @@
       }
 
       if ($this->espModel->insertEsp($datos)) {
-        redirection('/pages')
+        redirection('/pages');
       }else{
         $datos = [
           'nombre' => '',
