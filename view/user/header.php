@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../../assets/css/divs-atracciones.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/table.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/slides.css">
-        <script type="text/javascript" src="../../assets/js/slide.js"></script>
+        
         
 
     </head>
@@ -24,13 +24,11 @@
                 <nav  class="menu">  
                 <ul>
                     </li>
+                    <li ><a href="?c=esp&a=Index">Sistemacirco</a>
+                    </li>
                     <li ><a href="?c=esp&a=Index">Espectaculos</a>
                     </li>
-                    <li ><a href="?c=atra&a=Index">Atracciones</a>
-                    </li>
                     <li ><a href="?c=ciu&a=Index">Ciudades</a>
-                    </li>
-                    <li ><a href="?c=cro&a=Index">Cronograma</a>
                     </li>
                 </ul>
                 </nav>

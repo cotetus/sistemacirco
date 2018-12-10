@@ -4,10 +4,12 @@ require_once 'model/indexClass.php';
 class atraController{
     
     private $model;
+    private $aux;
     
     
     public function __CONSTRUCT(){
         $this->model = new Atracciones();
+        $this->aux = new Espectaculos();
     }
     
     public function Index(){
@@ -25,6 +27,8 @@ class atraController{
     public function Crud(){
         if(isset($_REQUEST['id'])){
             $atra = Atracciones::listOne($_REQUEST['id']);
+            $id = $atra['id_esp'];
+            $esp = Espectaculos::listOne($id);
         }
 
         require_once 'view/admin/header.php';
@@ -84,7 +88,7 @@ class atraController{
         $id = $_REQUEST["id"];
         $delete = Atracciones::delete($id);
         if (isset($delete)) {
-            header('Location: index.php');
+            header('Location: index.php?c=atra&a=Index');
         }else{
             echo "error";
 

@@ -11,6 +11,7 @@ class espController{
     }
     
     public function Index(){
+        $esp = Espectaculos::listAll();
         require_once 'view/admin/header.php';
         require_once 'view/admin/esp/listEsp.php';
         require_once 'view/admin/footer.php';

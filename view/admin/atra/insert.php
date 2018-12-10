@@ -1,19 +1,20 @@
 <div id="wrapper-esp-all">
 			        
-              <ul class="menu-esp-ul"> 	
+              	
               <form method="POST" action="?c=atra&a=Guardar" id="form" enctype="multipart/form-data">
-		<li><input type="hidden" name="id"/></li>
-		<li>Nombre:</li>
-		<li><input type="text" name="nombre" placeholder="Ingrese el Nombre" required/></li>
-		<li>Espectaculo:</li>
-		<li><input type= "text" name="id_esp" placeholder="Ingrese el Espectaculo" required/></li>
-		<li>Logo:</li>
-		<li><input type="file" name="img"/></li>
-		<li>Descripcion:</li>
-		<li><textarea rows="10" cols="50" name="descripcion" form="form"></textarea></li>
-		<li><input class="button edit" type="submit" value="Registrar"/></li>
-		</form>
-				
-			</ul>
-		</li>
-            </ul>
+		<input type="hidden" name="id"/>
+		<label>Nombre:</label>
+		<input type="text" name="nombre" placeholder="Ingrese el Nombre" required/>
+		<select  name="id_esp"/>
+		<option value ="">Selecione</option>
+		<?php
+		foreach($this->aux->listAll() as $item){
+		echo "<option value = '".$item['id']."'>".$item['nombre']."</option>";}
+		?>
+		</select>
+		<label>Logo:</label><br>
+		<input type="file" name="img"/><br>
+		<label>Descripcion:</label><br>
+		<textarea rows="10" cols="150" name="descripcion" form="form"></textarea>
+		<input class="button edit" type="submit" value="Registrar"/>
+		</form></div>

@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/divs-atracciones.css">
         <link rel="stylesheet" type="text/css" href="assets/css/table.css">
         <link rel="stylesheet" type="text/css" href="assets/css/slide.css">
-        
+        <link rel="stylesheet" type="text/css" href="assets/css/form.css">        
 
     </head>
     
