@@ -1,0 +1,152 @@
+body {
+	background-color: gray;
+}
+
+
+.menu-div-esp{
+    float: left;
+    width: 40%;
+    height: 100%;
+    background-color: grid;
+    
+ }
+ 
+ #esp-img {
+    width: 180px;
+    height: 180px;
+    transition: transform .4s;
+
+
+}
+   
+
+#esp-img:hover {
+    transform: scale(1.1);
+
+}
+
+ #esp-wrapper   {
+    grid-auto-columns: 1fr 3fr;
+    margin-left: 20px;
+ 	padding: auto;
+ 	margin-top: 50px;
+    background-color: #fff;	
+}
+
+ #wrapper-esp-all {
+	background-color: #fff;
+	height: auto;
+	width: auto;
+
+ }
+  #row{
+    margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 3px;
+
+}
+
+.menu-esp-ul {
+	list-style-type: none;
+    width: 100%;
+    text-align: left;
+    background-color: #5E5E5E;
+}
+
+.menu-esp-ul li a {
+    display: block;
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.menu-esp-ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+ a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+ }
+ a:hover {
+    color: black;
+ }
+.button  {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.delete {
+    background-color: #E83030; 
+    color: white; 
+    border: 2px solid #FF0000;
+
+}
+.delete:hover {
+    background-color: #fff;
+    color: black;
+}
+.edit {
+    background-color: #2E92E6;
+    color: white;
+    border: 2px solid blue;
+}
+
+.edit:hover {
+    background-color: #fff;
+    color: black;
+}
+
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+
+}
+.submenu form {
+    color: black;
+}
+
+.footer {
+    background-color: black;
+    height: 100px;
+}
+
+
+
+
+
+
+
+ 
+
+
+

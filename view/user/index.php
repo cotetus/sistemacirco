@@ -1,12 +1,12 @@
 <?php
-require_once 'model/Conexion.php';
+require_once '../../model/Conexion.php';
 
 $controller = 'esp';
 
 // Todo esta lógica hará el papel de un FrontController
 if(!isset($_REQUEST['c']))
 {
-    require_once "controller/$controller.controller.php";
+    require_once "../../controller/user/$controller.controller.php";
     $controller = ucwords($controller) . 'Controller';
     $controller = new $controller;
     $controller->Index();    
@@ -18,7 +18,7 @@ else
     $accion = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'Index';
     
     // Instanciamos el controlador
-    require_once "controller/$controller.controller.php";
+    require_once "../../controller/user/$controller.controller.php";
     $controller = ucwords($controller) . 'Controller';
     $controller = new $controller;
     
