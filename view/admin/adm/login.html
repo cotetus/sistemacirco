@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/form.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+<title></title>
+</head>
+<body>
+	<h1 align="center">Para acceder al panel administrativo debe identificarse.</h1>
+	<form  method="POST" action ="?c=admin&a=captcha">
+		Usuario:<input type="text" name="email"/>
+		<br/>
+		Contraseña:<input type="password" name="pass"/>
+		<div class="g-recaptcha" data-sitekey="6LdmUIAUAAAAADHA7iCgmuIes4I8cDwrHfTtn9Uj"></div>
+
+		<input type="submit"></input>
+	</form>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>

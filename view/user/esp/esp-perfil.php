@@ -12,7 +12,22 @@
 <!-- Foreach-->
 <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
-</div>
+</div><br>
+
+           <h1 align = "center" style="color: white">Atracciones</h1>
+              <!-- Posibles cambios con JavaScript-->
+              <div style="margin-top: auto;" id='row'> 
+      	<?php  foreach ($this->atra->listAll() as $item) {
+      		if ($id == $item['id_esp']) {
+      	echo "
+      	<div  id='esp-wrapper'>
+          <img class='tooltip'id='esp-img' src = '../../assets/image/".$item['img']."'/> 
+        	<h4>".$item['nombre']."</h4>
+        	<p>".$item['descripcion']."</p>
+          </div>";	
+      	}}; ?>
+      	</div>
+       
 
 
 

@@ -5,7 +5,7 @@
 		<select  name="id_ciu"/>
 		<option value =""><?php echo $ciu['nombre']; ?></option>
 		<?php
-		foreach($this->aux->listAll() as $item){
+		foreach($this->ciudad->listAll() as $item){
 		echo "<option value = '".$item['id']."'>".$item['nombre']."</option>";}
 		?>
 		</select>

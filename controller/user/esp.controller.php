@@ -2,12 +2,13 @@
 require_once '../../model/indexClass.php';
 
 class espController{
-    
+    private $atra;
     private $model;
     
     
     public function __CONSTRUCT(){
         $this->model = new Espectaculos();
+        $this->atra = new Atracciones();
     }
     
     public function Index(){
@@ -19,6 +20,7 @@ class espController{
 public function One(){
         if(isset($_REQUEST['id'])){
             $esp = Espectaculos::listOne($_REQUEST['id']);
+
         }
 
         require_once '../../view/user/header.php';

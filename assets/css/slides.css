@@ -10,7 +10,7 @@ p {
 /* Slideshow container */
 .slideshow-container {
   max-width: 1600px;
-  max-height: 300px;
+  max-height: 600px;
   position: relative;
   margin: auto;
 }
