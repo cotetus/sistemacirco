@@ -8,6 +8,7 @@ class espController{
     
     public function __CONSTRUCT(){
         $this->model = new Espectaculos();
+
     }
     
     public function Index(){

@@ -10,7 +10,7 @@ p {
 /* Slideshow container */
 .slideshow-container {
   max-width: 1600px;
-  max-height: 600px;
+  max-height: 495px;
   position: relative;
   margin: auto;
 }
@@ -19,7 +19,7 @@ p {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 30%;
   width: auto;
   padding: 16px;
   margin-top: -22px;

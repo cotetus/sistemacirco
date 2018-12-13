@@ -22,13 +22,13 @@
             </label>
             
                 <nav  class="menu">  
-                <ul>
+                <ul style="background-color: black">
                     </li>
-                    <li ><a href="?c=esp&a=Index">Sistemacirco</a>
+                    <li ><a href="?c=esp&a=Index">SISTEMACIRCO</a>
                     </li>
-                    <li ><a href="?c=esp&a=Index">Espectaculos</a>
+                    <li ><a href="?c=esp&a=Index">ESPECTACULOS</a>
                     </li>
-                    <li ><a href="?c=ciu&a=Index">Ciudades</a>
+                    <li ><a href="?c=ciu&a=Index">CIUDADES</a>
                     </li>
                 </ul>
                 </nav>

@@ -7,6 +7,7 @@
 <body>
 	<h1 align="center">Para acceder al panel administrativo debe identificarse.</h1>
 	<form  method="POST" action ="?c=admin&a=captcha">
+		<input type="hidden" name="id">
 		Usuario:<input type="text" name="email"/>
 		<br/>
 		Contraseña:<input type="password" name="pass"/>

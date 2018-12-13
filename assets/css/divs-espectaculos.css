@@ -27,9 +27,7 @@ body {
 
  #esp-wrapper   {
     grid-auto-columns: 1fr 3fr;
-    margin-left: 20px;
  	padding: auto;
- 	margin-top: 50px;
     background-color: #fff;	
 }
 
@@ -41,7 +39,6 @@ body {
  }
   #row{
     text-align: center;
-    margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;

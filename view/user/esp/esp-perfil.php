@@ -14,9 +14,9 @@
 <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
 </div><br>
 
-           <h1 align = "center" style="color: white">Atracciones</h1>
+           <h1 style ="color: white"align = "center" >Atracciones</h1>
               <!-- Posibles cambios con JavaScript-->
-              <div style="margin-top: auto;" id='row'> 
+              <div style="background-color: white" id='row'> 
       	<?php  foreach ($this->atra->listAll() as $item) {
       		if ($id == $item['id_esp']) {
       	echo "
@@ -26,7 +26,7 @@
         	<p>".$item['descripcion']."</p>
           </div>";	
       	}}; ?>
-      	</div>
+      	</div></div>
        
 
 

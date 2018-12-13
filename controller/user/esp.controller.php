@@ -4,11 +4,13 @@ require_once '../../model/indexClass.php';
 class espController{
     private $atra;
     private $model;
+    private $ciudad;
     
     
     public function __CONSTRUCT(){
         $this->model = new Espectaculos();
         $this->atra = new Atracciones();
+        $this->ciudad = new Ciudad();
     }
     
     public function Index(){
