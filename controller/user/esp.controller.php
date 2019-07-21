@@ -1,5 +1,5 @@
 <?php
-require_once '../../model/indexClass.php';
+ require_once 'model/indexClass.php';
 
 class espController{
     private $atra;
@@ -14,10 +14,10 @@ class espController{
     }
     
     public function Index(){
-        $esp = Espectaculos::listAll();
-        require_once '../../view/user/header.php';
-        require_once '../../view/user/esp/esp-all.php';
-        require_once '../../view/user/footer.php';
+        $esp = Espectaculos::listOne(27);
+        require_once 'view/user/head.php';
+        require_once 'view/user/esp/home.php';
+        require_once 'view/user/footer.php';
     }
 public function One(){
         if(isset($_REQUEST['id'])){
@@ -25,9 +25,9 @@ public function One(){
 
         }
 
-        require_once '../../view/user/header.php';
-        require_once '../../view/user/esp/esp-perfil.php';
-        require_once '../../view/user/footer.php';
+        require_once 'view/user/head.php';
+        require_once 'view/user/esp/esp-perfil.php';
+        require_once 'view/user/footer.php';
         }     
     }
     ?>

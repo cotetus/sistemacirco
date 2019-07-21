@@ -1,0 +1,13 @@
+
+.wrapper {
+    position: relative;
+    padding: 0;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    max-width: 1429px;
+    padding: 0 15px;
+    width: 100%;
+}

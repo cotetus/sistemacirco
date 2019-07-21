@@ -4,11 +4,11 @@
         <title>Cotetus</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/divs-espectaculos.css">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/estilos.css">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/divs-atracciones.css">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/table.css">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/slides.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/divs-espectaculos.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/divs-atracciones.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/table.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/slides.css">
         
         
 
@@ -16,6 +16,7 @@
     
 
     <body>
+        <div id = "pagina">
         <header >
             <input type="checkbox" id="btn-menu">
             <label for="btn-menu" class="icon-menu">

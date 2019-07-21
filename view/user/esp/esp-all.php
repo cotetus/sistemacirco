@@ -1,7 +1,7 @@
   <div class="slideshow-container">
   <?php foreach($this->model->listAll() as $item): ?>
   <div class="mySlides fade">
-  <img <?php echo "src = '../../assets/image/banner/".$item['banner']."'";?> style="width: 100%"/>
+  <img <?php echo "src = 'assets/image/banner/".$item['banner']."'";?> style="width: 100%"/>
   <h1 class="text"><?php echo $item['artista']; ?>
   </h1>
 </div>
@@ -29,7 +29,7 @@
                 <!-- Posibles cambios con JavaScript--> 
       	<?php foreach($this->model->listAll() as $item): ?>
         	<div id="esp-wrapper">
-          <img class="tooltip"id="esp-img" <?php echo "src = '../../assets/image/".$item['img']."'";?>/> 
+          <img class="tooltip"id="esp-img" <?php echo "src = 'assets/image/".$item['img']."'";?>/> 
         	<h3><?php echo $item['nombre'];?></h3>
         	<p><?php echo substr($item['artista'], 0,20)."...";?></p>
           <button class="cienx"><strong><a <?php echo "href='?c=esp&a=One&id= ".$item['id']."'";?>>Ver más</a></strong>

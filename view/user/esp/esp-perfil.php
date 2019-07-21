@@ -2,7 +2,7 @@
 <div class="slideshow-container">
 <!-- Foreach-->
 <div class="mySlides fade">
-  <img  <?php echo "src = '../../assets/image/banner/".$esp['banner']."'";?> style="width: 100%"/>
+  <img  <?php echo "src = 'assets/image/banner/".$esp['banner']."'";?> style="width: 100%"/>
   <div class="text"><strong><h1><?php echo $esp['nombre'].":"; ?>
   </h1></strong>
   <h3><?php echo $esp['artista'].".."; ?>
@@ -21,7 +21,7 @@
       		if ($id == $item['id_esp']) {
       	echo "
       	<div  id='esp-wrapper'>
-          <img class='tooltip'id='esp-img' src = '../../assets/image/".$item['img']."'/> 
+          <img class='tooltip'id='esp-img' src = 'assets/image/".$item['img']."'/> 
         	<h4>".$item['nombre']."</h4>
         	<p>".$item['descripcion']."</p>
           </div>";	

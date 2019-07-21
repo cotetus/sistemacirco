@@ -1,0 +1,134 @@
+*, :before, :after {
+    box-sizing: border-box;
+    padding: auto;
+    margin: auto;
+}
+
+body, html {
+    font-family: Roboto,sans-serif;
+    letter-spacing: .4px;
+    line-height: 2.4em;
+}
+
+html {
+    color: #333;
+}
+
+div {
+	display: block;
+}
+
+a {
+    color: #666;
+    letter-spacing: .4px;
+    text-decoration: none;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+ nav {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #000;
+    color: #e9e9e9;
+    height: 48px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    font-size: .875rem;
+    font-weight: 400;
+}
+ #web {
+    position: relative;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+ .menu {
+    backface-visibility: hidden;
+    background: #000;
+    color: #e9e9e9;
+    height: 48px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+a:not(.btn) {
+    display: inline-block;
+    /*height: 48px;*/
+    line-height: 48px;
+    padding: 0 15px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.izquierda  {
+    position: relative;
+    z-index: 10;
+}
+
+.centro, .izquierda, .derecha{
+    background: #000;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.derecha {
+	position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    width: 160px;
+}
+
+
+ header, a {
+    color: inherit;
+}
+
+
+ .paginas {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+ .content {
+    float: left;
+}
+
+
+ .main-header {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 40;
+}
+
+.link:hover {
+    background-color: gray;
+    /*-webkit-animation-name: menu; 
+    -webkit-animation-duration: 0.4s;*/
+    animation-name: menu;
+    animation-duration: 0.4s;
+}
+
+@keyframes menu {
+    from {background-color: black;}
+    to {background-color: gray;}
+}
+
+
+
+
