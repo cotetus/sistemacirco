@@ -4,13 +4,13 @@
     padding-top: 50px;
     color: #e9e9e9;
     display: table;
-    min-height: 535px;
+    min-height: 490px;
     position: relative;
     width: 100%;
 }
 
 .banner .table {
-    height: 535px;
+    height: 440px;
 }
 
 .table {
@@ -19,7 +19,7 @@
 }
 
 .table .table-cell {
-    padding-bottom: 86px;
+    padding-bottom: 30px;
     vertical-align: bottom;
 }
 
@@ -48,6 +48,32 @@
     font-size: 1.25rem;
     font-weight: 100;
 }
+
+/*.col-right:before {
+    content: "“";
+    left: -50px;
+}
+
+.col-right:after {
+    content: "”";
+    right: -50px;
+}
+
+.col-right:before {
+    font-family: Georgia,serif;
+    font-size: 5rem;
+    position: relative;
+    top: 56px;
+    opacity: .3;
+}
+
+.col-right:after {
+    font-family: Georgia,serif;
+    font-size: 5rem;
+    position: relative;
+    top: 56px;
+    opacity: .3;
+}*/
 
 
 
@@ -127,7 +153,25 @@ a.btn:hover {
 	background-color: #1b1b1b;
 	color: #fac50e;
     border-color: #1b1b1b;
-	
+}
+
+.btn-wrapper {
+    padding: 7.8px 6px;
+    border-radius: 1.15em/50%;
+}
+
+.btn-wrapper:hover {
+    position: relative;
+    top: 0px;
+    animation-name: comprar;
+    animation-duration: 0.2s;
+}
+
+@keyframes comprar {
+    0%   {top: 0px; position: relative;}
+    25%  {top: 10px; position: relative;}
+    50%  {top: -10px; position: relative;}
+    100% {top: 0px; position: relative;}
 }
 
 

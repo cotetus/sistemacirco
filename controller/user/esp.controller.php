@@ -14,7 +14,8 @@ class espController{
     }
     
     public function Index(){
-        $esp = Espectaculos::listOne(27);
+        $esp = Espectaculos::listOne(28);
+        //$espAll = Espectaculos::listAll();
         require_once 'view/user/head.php';
         require_once 'view/user/esp/home.php';
         require_once 'view/user/footer.php';

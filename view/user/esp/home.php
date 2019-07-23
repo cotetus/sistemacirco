@@ -3,7 +3,8 @@
     <div 
         <?php echo "style= 'background-image: url(assets/image/banner/".$esp['img'].");
                 background-repeat: no-repeat;
-                width: 100%;'" ?>>
+                width: 100%;
+                background-attachment: fixed;'" ?>>
     <div class = "table">
       <div class = "table-cell">
       <div class = "row">
@@ -32,7 +33,7 @@
      <nav class="row">
        <h2 class = "title">Otros espectáculos que te pueden interesar</h2>
        <div class = "hidden-xs hidden-sm">
-         <ul class = " sub-nav">
+         <ul class = "sub-nav">
            <li><button class = "nav-item">Todos los Espectaculos</button></li>
            <?php foreach($this->ciudad->listAll() as $ciu): ?>
             <li><button class = "nav-item"><?php echo $ciu['nombre']; ?></button></li>
@@ -46,7 +47,35 @@
  <!--menu-->
 
 <!--carrussel-->
-<div class = "container wrapper" id = "other-shows"></div>
+<div class = "container wrapper" id = "other-shows">
+  <div class = "container slider">
+    <ul class = "row">
+
+      <?php foreach($this->model->listAll() as $espe): ?>
+      <li class = "carrusel-item" style="display: inline-block;">
+        <div class = "show-item">
+          <figure class = "row figure">
+            <a href="?c=esp&a=Index">
+              <img <?php echo "src = 'assets/image/".$espe['img']."'";?>>
+            </a>
+            <figcaption>
+              <div class = "desc">
+                <h3 class = "name"><?php echo $espe['nombre']; ?></h3>
+                <span class = "text"><?php echo $espe['artista']; ?></span>
+                <a href="?c=esp&a=Index" class = "cta">Ver el espectáculo</a>
+              </div>
+            </figcaption>
+          </figure>
+          <div class = "ticket">
+            <a href="" class = "btn"><span class = "btn-wrapper">Comprar entrada</span></a>
+          </div>
+        </div>
+      </li>
+      <?php endforeach; ?>
+
+    </ul>
+  </div>
+</div>
 <!--carrussel-->
 
  </section>
