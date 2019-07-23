@@ -8,6 +8,9 @@
         <link rel="stylesheet" type="text/css" href="assets/css/prueba/banner.css">
         <link rel="stylesheet" type="text/css" href="assets/css/prueba/secondmenu.css">
         <link rel="stylesheet" type="text/css" href="assets/css/prueba/carrussel.css">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+
 
                 
         

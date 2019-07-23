@@ -26,6 +26,7 @@
   </section>
 <!--banner-->
 <!--carrussel-wrapper-->
+
  <section class = "carrusel">
  <!--menu-->
  <header class="header">
@@ -49,13 +50,14 @@
 <!--carrussel-->
 <div class = "container wrapper" id = "other-shows">
   <div class = "container slider">
-    <ul class = "row">
-
+    <ul  class = "row">
+      <div class = "slider-carousel">
       <?php foreach($this->model->listAll() as $espe): ?>
+        <div>
       <li class = "carrusel-item" style="display: inline-block;">
         <div class = "show-item">
           <figure class = "row figure">
-            <a href="?c=esp&a=Index">
+            <a href="">
               <img <?php echo "src = 'assets/image/".$espe['img']."'";?>>
             </a>
             <figcaption>
@@ -71,13 +73,46 @@
           </div>
         </div>
       </li>
+        </div>
       <?php endforeach; ?>
-
+      </div>
     </ul>
   </div>
 </div>
 <!--carrussel-->
 
  </section>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+<script type="text/javascript">
+  $('.slider-carousel').slick({
+    autoplay: true,
+    centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+  });
+</script>
 <!--carrussel-wrapper-->
 
