@@ -1,10 +1,12 @@
 <!--banner-->
+
   <section class = "banner">
     <div 
         <?php echo "style= 'background-image: url(assets/image/banner/".$esp['img'].");
                 background-repeat: no-repeat;
                 width: 100%;
-                background-attachment: fixed;'" ?>>
+                background-attachment: fixed;
+                '" ?>>
     <div class = "table">
       <div class = "table-cell">
       <div class = "row">
@@ -50,11 +52,11 @@
 <!--carrussel-->
 <div class = "container wrapper" id = "other-shows">
   <div class = "container slider">
-    <ul  class = "row">
+
       <div class = "slider-carousel">
       <?php foreach($this->model->listAll() as $espe): ?>
         <div>
-      <li class = "carrusel-item" style="display: inline-block;">
+      
         <div class = "show-item">
           <figure class = "row figure">
             <a href="">
@@ -72,16 +74,18 @@
             <a href="" class = "btn"><span class = "btn-wrapper">Comprar entrada</span></a>
           </div>
         </div>
-      </li>
+      
         </div>
       <?php endforeach; ?>
       </div>
-    </ul>
+
   </div>
 </div>
 <!--carrussel-->
 
  </section>
+
+
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

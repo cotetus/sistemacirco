@@ -1,10 +1,12 @@
 *, :before, :after {
+    align-content: center;
     box-sizing: border-box;
     padding: auto;
     margin: auto;
 }
 
 body, html {
+    max-width: 1920px;
     font-family: Roboto,sans-serif;
     letter-spacing: .4px;
     line-height: 2.4em;

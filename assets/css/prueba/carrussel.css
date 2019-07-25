@@ -1,5 +1,5 @@
 .carrusel {
-    background-color: white;
+    background-color: #d8d7d7;
     color: #919191;
     margin-bottom: 15px;
     padding-top: 15px;
@@ -14,13 +14,13 @@
 }
 
 .wrapper {
-    position: relative;
-    padding: 0;
+    background-color: #d8d7d7;
+    position: absolute;
+    padding: 0 20px;
 }
 
 
- li.carrusel-item .show-item {
-	max-width: 300px;
+ /*li.carrusel-item .show-item {
     float: left;
     position: relative;
     padding: 0 20px;
@@ -28,7 +28,7 @@
 li.carrusel-item .show-item .row a{
     padding: 0px!important;
     width: 100%;
-}
+}*/
 
 .figure .name {
     color: #333;
